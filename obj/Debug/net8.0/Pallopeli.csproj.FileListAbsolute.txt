@@ -50,3 +50,4 @@ D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\refint\Pallopeli.dll
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.pdb
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.genruntimeconfig.cache
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\ref\Pallopeli.dll
+D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.sourcelink.json

@@ -10,6 +10,8 @@ namespace Pallopeli
     /// @version v1.0.0 (21.05.2024)
     /// <summary>
     /// Pidemmälle työstetty pallopeli. Tarkoituksena tuhota kaikki muut pallot.
+    /// Ohjattava pallo kasvaa aina kun se saa uuden pallon tuhottua.
+    /// On siis mahdollista ettei saa kaikkia palloja kentältä ja näin häviää pelin.
     /// </summary>
     public class Pallopeli : PhysicsGame
     {
