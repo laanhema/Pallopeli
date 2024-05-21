@@ -57,7 +57,7 @@ namespace Pallopeli
 
 
         /// <summary>
-        /// Luo tietyn säteisen ja värisen pallon.
+        /// Luo tietyn säteisen ja värisen pallon tiettyyn (x,y) kohtaan kenttää.
         /// </summary>
         /// <param name="sade"></param>
         /// <param name="vari"></param>
@@ -150,10 +150,10 @@ namespace Pallopeli
         public void LuoKentta()
         {
             Level.BackgroundColor = Color.Black;
-            ylaReuna = Level.CreateTopBorder(0.5, false);
-            alaReuna = Level.CreateBottomBorder(0.5, false);
-            vasenReuna = Level.CreateLeftBorder(0.5, false);
-            oikeaReuna = Level.CreateRightBorder(0.5, false);
+            ylaReuna = Level.CreateTopBorder(1.0, false);
+            alaReuna = Level.CreateBottomBorder(1.0, false);
+            vasenReuna = Level.CreateLeftBorder(1.0, false);
+            oikeaReuna = Level.CreateRightBorder(1.0, false);
             Camera.ZoomToAllObjects(0);
         }
 
