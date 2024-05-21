@@ -5,7 +5,7 @@ using System;
 namespace Pallopeli
 {    
     /// @author Lauri Makkonen
-    /// @version v1.0.0 (21.05.2024)
+    /// @version v1.2.0 (21.05.2024)
     /// <summary>
     /// Apuluokka joka laittaa pelin käyntiin.
     /// </summary>

@@ -51,3 +51,4 @@ D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.pdb
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.genruntimeconfig.cache
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\ref\Pallopeli.dll
 D:\Users\Työ\ohj1\Pallopeli\obj\Debug\net8.0\Pallopeli.sourcelink.json
+D:\Users\Työ\ohj1\Pallopeli\bin\Debug\net8.0\Content\Starfield 1 - 1024x1024.png

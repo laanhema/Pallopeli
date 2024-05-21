@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pallopeli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d33680e74294053f234a0399f8f80d13611bf02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e17f24433e15097ab51558b7b1220af6adb4b330")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pallopeli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pallopeli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

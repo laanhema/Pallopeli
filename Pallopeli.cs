@@ -7,7 +7,7 @@ using System;
 namespace Pallopeli
 {
     /// @author Lauri Makkonen
-    /// @version v1.0.0 (21.05.2024)
+    /// @version v1.2.0 (21.05.2024)
     /// <summary>
     /// Pidemmälle työstetty pallopeli. Tarkoituksena tuhota kaikki muut pallot.
     /// Ohjattava pallo kasvaa aina kun se saa uuden pallon tuhottua.
@@ -25,6 +25,7 @@ namespace Pallopeli
         Vector nopeusAlas = new Vector(0.0, -200.0);
         Vector nopeusVasem = new Vector(-200.0, 0.0);
         Vector nopeusOikea = new Vector(200.0, 0.0);
+        readonly Image tausta = LoadImage("Starfield 1 - 1024x1024.png");
 
 
         /// <summary>
@@ -139,8 +140,7 @@ namespace Pallopeli
             this.Add(rajahdys);
 
             kohde.FadeColorTo(Color.Transparent, 0.5);
-            objekti.Width += 0.5 * kohde.Width;
-            objekti.Height += 0.5 * kohde.Height;
+            objekti.Body.Size += 0.5 * kohde.Body.Size;
         }
 
 
@@ -149,12 +149,15 @@ namespace Pallopeli
         /// </summary>
         public void LuoKentta()
         {
+            Level.Background.Image = tausta;
+            Level.Background.ScaleToLevelFull();
             Level.BackgroundColor = Color.Black;
-            ylaReuna = Level.CreateTopBorder(1.0, false);
-            alaReuna = Level.CreateBottomBorder(1.0, false);
-            vasenReuna = Level.CreateLeftBorder(1.0, false);
-            oikeaReuna = Level.CreateRightBorder(1.0, false);
-            Camera.ZoomToAllObjects(0);
+            bool isVisible = false;
+            ylaReuna = Level.CreateTopBorder(1.0, isVisible);
+            alaReuna = Level.CreateBottomBorder(1.0, isVisible);
+            vasenReuna = Level.CreateLeftBorder(1.0, isVisible);
+            oikeaReuna = Level.CreateRightBorder(1.0, isVisible);
+            Camera.ZoomToAllObjects(-200);
         }
 
 
