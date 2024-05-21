@@ -1,6 +1,8 @@
+#region Using Statements
 using Jypeli;
 using Jypeli.Assets;
 using System;
+#endregion
 
 namespace Pallopeli
 {
