@@ -25,6 +25,9 @@ namespace Pallopeli
         Vector nopeusOikea = new Vector(200.0, 0.0);
 
 
+        /// <summary>
+        /// Pääohjelma.
+        /// </summary>
         public override void Begin()
         {
             LuoTaso();
@@ -137,19 +140,6 @@ namespace Pallopeli
             kohde.FadeColorTo(Color.Transparent, 0.5);
             objekti.Width += 0.5 * kohde.Width;
             objekti.Height += 0.5 * kohde.Height;
-
-
-
-            /*
-            Jypeli.Timer ajastin = new Jypeli.Timer(1000, Tuhoa(kohde));
-            ajastin.TimesLimited = true;
-            ajastin.Times.SetValue(1);
-            ajastin.Enabled = true;
-            */
-            //        Timer ajastin = new Timer(LuoPisteLaskuri)
-
-
-
         }
 
 
@@ -159,18 +149,20 @@ namespace Pallopeli
         public void LuoTaso()
         {
             Level.BackgroundColor = Color.Black;
-            // StorageFile tiedosto;
-            // tiedosto = new Image(tiedosto)
-            //Level.Background.SetImage("D:\\Users\\Työ\\Downloads\\bgtest.jpg");
             ylaReuna = Level.CreateTopBorder(0.5, false);
             alaReuna = Level.CreateBottomBorder(0.5, false);
             vasenReuna = Level.CreateLeftBorder(0.5, false);
             oikeaReuna = Level.CreateRightBorder(0.5, false);
             Camera.ZoomToAllObjects(0);
-
         }
 
 
+        /// <summary>
+        /// Luo pistelaskurin.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public IntMeter LuoPisteLaskuri(double x, double y)
         {
             IntMeter laskuri = new IntMeter(0);
@@ -182,12 +174,6 @@ namespace Pallopeli
             naytto.Font = Font.DefaultBold;
             this.Add(naytto);
             return laskuri;
-        }
-
-
-        public void Tuhoa(PhysicsObject kohde)
-        {
-            kohde.Destroy();
         }
     }
 }
