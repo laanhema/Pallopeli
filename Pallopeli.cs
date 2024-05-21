@@ -17,11 +17,8 @@ namespace Pallopeli
         PhysicsObject alaReuna;
         PhysicsObject vasenReuna;
         PhysicsObject oikeaReuna;
-
         PhysicsObject ohjattavaPallo;
-
         IntMeter pisteet;
-
         Vector nopeusYlos = new Vector(0.0, 200.0);
         Vector nopeusAlas = new Vector(0.0, -200.0);
         Vector nopeusVasem = new Vector(-200.0, 0.0);
