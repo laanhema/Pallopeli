@@ -1,9 +1,6 @@
-using FarseerPhysics.Collision;
-using FarseerPhysics.Common.PhysicsLogic;
 using Jypeli;
 using Jypeli.Assets;
 using System;
-using System.Timers;
 
 namespace Pallopeli
 {
