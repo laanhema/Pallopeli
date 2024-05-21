@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{D2FADDF1-23F7-4C5F-B514-92BDC60A7C5C}|Pallopeli.csproj|d:\\users\\ty\u00F6\\ohj1\\pallopeli\\ohjelma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2FADDF1-23F7-4C5F-B514-92BDC60A7C5C}|Pallopeli.csproj|solutionrelative:ohjelma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2FADDF1-23F7-4C5F-B514-92BDC60A7C5C}|Pallopeli.csproj|d:\\users\\ty\u00F6\\ohj1\\pallopeli\\pallopeli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D2FADDF1-23F7-4C5F-B514-92BDC60A7C5C}|Pallopeli.csproj|solutionrelative:pallopeli.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pallopeli",
+              "DocumentMoniker": "D:\\Users\\Ty\u00F6\\ohj1\\Pallopeli\\Pallopeli.csproj",
+              "RelativeDocumentMoniker": "Pallopeli.csproj",
+              "ToolTip": "D:\\Users\\Ty\u00F6\\ohj1\\Pallopeli\\Pallopeli.csproj",
+              "RelativeToolTip": "Pallopeli.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-21T13:00:24.599Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +45,7 @@
               "RelativeDocumentMoniker": "Pallopeli.cs",
               "ToolTip": "D:\\Users\\Ty\u00F6\\ohj1\\Pallopeli\\Pallopeli.cs",
               "RelativeToolTip": "Pallopeli.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T09:53:59.259Z",
               "EditorCaption": ""
@@ -41,7 +58,7 @@
               "RelativeDocumentMoniker": "Ohjelma.cs",
               "ToolTip": "D:\\Users\\Ty\u00F6\\ohj1\\Pallopeli\\Ohjelma.cs",
               "RelativeToolTip": "Ohjelma.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T09:53:55.042Z",
               "EditorCaption": ""
