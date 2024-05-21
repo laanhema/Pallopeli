@@ -33,9 +33,9 @@ namespace Pallopeli
             LuoTaso();
             LuoPalloja(30);
             ohjattavaPallo = LuoPallo(40, Color.White, 0, -350);
-            AddCollisionHandler(ohjattavaPallo, TormaysKasittelija);
             AsetaKontrollit();
             pisteet = LuoPisteLaskuri(Level.Left + 50, Level.Top - 50);
+            AddCollisionHandler(ohjattavaPallo, TormaysKasittelija);
         }
 
 
