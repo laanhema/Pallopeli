@@ -32,7 +32,7 @@ namespace Pallopeli
         /// </summary>
         public override void Begin()
         {
-            LuoTaso();
+            LuoKentta();
             LuoPalloja(30);
             ohjattavaPallo = LuoPallo(40, Color.White, 0, -350);
             AsetaKontrollit();
@@ -147,7 +147,7 @@ namespace Pallopeli
         /// <summary>
         /// Alustaa kentän.
         /// </summary>
-        public void LuoTaso()
+        public void LuoKentta()
         {
             Level.BackgroundColor = Color.Black;
             ylaReuna = Level.CreateTopBorder(0.5, false);
