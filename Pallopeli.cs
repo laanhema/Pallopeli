@@ -90,7 +90,7 @@ namespace Pallopeli
         /// </summary>
         /// <param name="objekti"></param>
         /// <param name="nopeus"></param>
-        public void AsetaNopeus(PhysicsObject objekti, Vector nopeus)
+        public static void AsetaNopeus(PhysicsObject objekti, Vector nopeus)
         {
             objekti.Velocity = nopeus;
         }
