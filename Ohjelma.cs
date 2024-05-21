@@ -3,15 +3,14 @@ using System;
 #endregion
 
 namespace Pallopeli
-{
+{    
+    /// @author Lauri Makkonen
+    /// @version v1.0.0 (21.05.2024)
     /// <summary>
-    /// The main class.
+    /// Apuluokka joka laittaa pelin käyntiin.
     /// </summary>
-    public static class Program
+    public static class Ohjelma
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {

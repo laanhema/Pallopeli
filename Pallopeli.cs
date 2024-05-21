@@ -7,7 +7,7 @@ using System;
 namespace Pallopeli
 {
     /// @author Lauri Makkonen
-    /// @version 20.05.2024
+    /// @version v1.0.0 (21.05.2024)
     /// <summary>
     /// Pidemmälle työstetty pallopeli. Tarkoituksena tuhota kaikki muut pallot.
     /// </summary>
