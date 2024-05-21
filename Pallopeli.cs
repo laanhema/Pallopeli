@@ -64,7 +64,6 @@ namespace Pallopeli
         /// <returns></returns>
         public PhysicsObject LuoPallo(double sade, Color vari, double x, double y)
         {
-            Random rnd = new Random();
             PhysicsObject pallo = new PhysicsObject(sade * 2, sade * 2, Shape.Circle, x, y);
             pallo.Color = vari;
             this.Add(pallo);
