@@ -3,6 +3,7 @@ using FarseerPhysics.Dynamics;
 using Jypeli;
 using Jypeli.Assets;
 using System;
+using System.Threading;
 #endregion
 
 namespace Pallopeli
@@ -137,7 +138,7 @@ namespace Pallopeli
         public void TormaysKasittelija(PhysicsObject objekti, PhysicsObject kohde)
         {
             if (kohde == ylaReuna || kohde == alaReuna || kohde == vasenReuna || kohde == oikeaReuna || kohde.IgnoresCollisionResponse) return;
-            Timer tuhoamisAjastin = new Timer();
+            Jypeli.Timer tuhoamisAjastin = new Jypeli.Timer();
             tuhoamisAjastin.Interval = 0.6;
             tuhoamisAjastin.Timeout += delegate { Tuhoa(kohde); };
             tuhoamisAjastin.Start();
@@ -160,6 +161,7 @@ namespace Pallopeli
 
             objekti.Body.Size += 0.5 * kohde.Body.Size;
             tuhoamisAjastin.Stop();
+            VoittikoPelaaja();
         }
 
 
@@ -170,6 +172,23 @@ namespace Pallopeli
         public void Tuhoa(PhysicsObject kohde)
         {
             kohde.Destroy();
+        }
+
+
+        /// <summary>
+        /// Tarkastetaan, voittiko pelaaja. Jos voitti niin näytetään tekstikenttä.
+        /// </summary>
+        public void VoittikoPelaaja()
+        {
+            if (pisteet.Value == 30)
+            {
+                Label tekstikentta = new Label(150, 30, "Voitit pelin!");
+                tekstikentta.Font = Font.DefaultBold;
+                tekstikentta.TextColor = Color.Black;
+                tekstikentta.Color = Color.White;
+                tekstikentta.BorderColor = Color.Red;
+                this.Add(tekstikentta);
+            }
         }
 
 
