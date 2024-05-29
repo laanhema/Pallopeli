@@ -1,4 +1,5 @@
 #region Using Statements
+using FarseerPhysics.Dynamics;
 using Jypeli;
 using Jypeli.Assets;
 using System;
@@ -34,7 +35,7 @@ namespace Pallopeli
         public override void Begin()
         {
             LuoKentta();
-            ohjattavaPallo = LuoPallo(40, Color.White, 0, -350);
+            ohjattavaPallo = LuoPallo(40, Color.White, 0, Level.Bottom + 40);
             LuoPalloja(30);
             AsetaKontrollit();
             pisteet = LuoPisteLaskuri(Level.Left + 50, Level.Top - 50);
@@ -44,13 +45,22 @@ namespace Pallopeli
 
         /// <summary>
         /// Luo satunnaisen värisen pallon, satunnaisella säteellä väliltä 5-30, satunnaisilla x- ja y-koordinaateilla.
+        /// Ei saa osua ohjattavaan palloon. Jos osuu niin annetaan uusia x- ja y- koordinaatteja kunnes ei osu.
         /// </summary>
         /// <returns>Luotu pallo.</returns>
         public PhysicsObject LuoPallo()
         {
-            Random rnd = new Random();
-            double randomSade = rnd.Next(5, 30);
-            PhysicsObject pallo = new PhysicsObject(randomSade * 2, randomSade * 2, Shape.Circle, rnd.Next((int)(Level.Left + randomSade), (int)(Level.Right - randomSade)), rnd.Next((int)(Level.Bottom + randomSade), (int)(Level.Top - randomSade)));
+            double randomSade = RandomGen.NextDouble(5, 31);
+            PhysicsObject pallo = new PhysicsObject(randomSade * 2, randomSade * 2, Shape.Circle, 0.0, 0.0); ;
+            bool liianLahella;
+
+            do
+            {
+                pallo.X = RandomGen.NextDouble(Level.Left + randomSade, Level.Right - randomSade);
+                pallo.Y = RandomGen.NextDouble(Level.Bottom + randomSade, Level.Top - randomSade);
+                
+                liianLahella = (ohjattavaPallo.Position.Distance(pallo.Position)) < ((ohjattavaPallo.Width / 2.0 + pallo.Width / 2.0));
+            } while (liianLahella);
 
             pallo.Color = RandomGen.NextColor();
             this.Add(pallo);
