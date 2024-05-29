@@ -7,7 +7,7 @@ using System;
 namespace Pallopeli
 {
     /// @author Lauri Makkonen
-    /// @version v1.2.0 (21.05.2024)
+    /// @version v1.3.0 (29.05.2024)
     /// <summary>
     /// Pidemmälle työstetty pallopeli. Tarkoituksena tuhota kaikki muut pallot.
     /// Ohjattava pallo kasvaa aina kun se saa uuden pallon tuhottua.
@@ -34,8 +34,8 @@ namespace Pallopeli
         public override void Begin()
         {
             LuoKentta();
-            LuoPalloja(30);
             ohjattavaPallo = LuoPallo(40, Color.White, 0, -350);
+            LuoPalloja(30);
             AsetaKontrollit();
             pisteet = LuoPisteLaskuri(Level.Left + 50, Level.Top - 50);
             AddCollisionHandler(ohjattavaPallo, TormaysKasittelija);
@@ -50,7 +50,8 @@ namespace Pallopeli
         {
             Random rnd = new Random();
             double randomSade = rnd.Next(5, 30);
-            PhysicsObject pallo = new PhysicsObject(randomSade * 2, randomSade * 2, Shape.Circle, rnd.Next(-500, 500), rnd.Next(-350, 350));
+            PhysicsObject pallo = new PhysicsObject(randomSade * 2, randomSade * 2, Shape.Circle, rnd.Next((int)(Level.Left + randomSade), (int)(Level.Right - randomSade)), rnd.Next((int)(Level.Bottom + randomSade), (int)(Level.Top - randomSade)));
+
             pallo.Color = RandomGen.NextColor();
             this.Add(pallo);
             return pallo;
@@ -126,7 +127,13 @@ namespace Pallopeli
         public void TormaysKasittelija(PhysicsObject objekti, PhysicsObject kohde)
         {
             if (kohde == ylaReuna || kohde == alaReuna || kohde == vasenReuna || kohde == oikeaReuna || kohde.IgnoresCollisionResponse) return;
+            Timer tuhoamisAjastin = new Timer();
+            tuhoamisAjastin.Interval = 0.6;
+            tuhoamisAjastin.Timeout += delegate { Tuhoa(kohde); };
+            tuhoamisAjastin.Start();
+            
             pisteet.AddValue(1);
+            // kohde.MaxVelocity = 400;
             kohde.IgnoresCollisionResponse = true;
             objekti.FadeColorTo(kohde.Color, 0.5);
 
@@ -140,7 +147,19 @@ namespace Pallopeli
             this.Add(rajahdys);
 
             kohde.FadeColorTo(Color.Transparent, 0.5);
+
             objekti.Body.Size += 0.5 * kohde.Body.Size;
+            tuhoamisAjastin.Stop();
+        }
+
+
+        /// <summary>
+        /// Tuhoaa parametrina viedyn PhysicsObject-olion.
+        /// </summary>
+        /// <param name="kohde"></param>
+        public void Tuhoa(PhysicsObject kohde)
+        {
+            kohde.Destroy();
         }
 
 
